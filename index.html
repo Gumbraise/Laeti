@@ -6,12 +6,18 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="icon" href="assets/img/logo.jpg" />
+		<link rel="icon" href="assets/img/logo.jpg" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css" media="screen" />
+
 		<title>Laeti</title>
+			
+
 	</head>
 	<body>
 		<img src="assets/img/Illustration.png" class="img-illustration" alt="LAETI">
@@ -46,34 +52,61 @@
 			</div>
 			<div class="div-modal" style="display: none">
 				<div class="col-sm-2">
-					<img class="animated fadeInDown" src="assets/img/1.jpg" alt="">
+					<a class="fancybox" rel="group" href="assets/img/1.jpg">
+						<img class="animated fadeInDown" src="assets/img/1.jpg" alt="">
+					</a>
 				</div>
 				<div class="col-sm-2">
+						<a id="fancybox" class="fancybox" data-fancybox-group="group" rel="group" href="assets/img/2.jpg">
 					<img class="animated fadeInDown" src="assets/img/2.jpg" alt="">
+					</a>
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/3.jpg">
 					<img class="animated fadeInDown" src="assets/img/3.jpg" alt="">
-				</div>
+				</a>
+			</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/4.jpg">
 					<img class="animated fadeInDown" src="assets/img/4.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/5.jpg">
 					<img class="animated fadeInDown" src="assets/img/5.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/6.jpg">
 					<img class="animated fadeInDown" src="assets/img/6.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/7.jpg">
 					<img class="animated fadeInDown" src="assets/img/7.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/8.jpg">
 					<img class="animated fadeInDown" src="assets/img/8.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/9.jpg">
 					<img class="animated fadeInDown" src="assets/img/9.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
+						<a class="fancybox" rel="group" href="assets/img/10.jpg">
 					<img class="animated fadeInDown" src="assets/img/10.jpg" alt="">
+				</a>
+
 				</div>
 				<div class="col-sm-2">
 					<a class="cta" style="position: absolute;" href="#">
@@ -92,10 +125,27 @@
             </div>
             <div class="div-modal" style="display: none">
                 <div class="quest">
-                    <form action="actions" method="POST">
-                        <input type="text" name="pseudo" placeholder="Nom+Prénom ou Pseudo" required><br><br><br>
-                        <input type="radio" class="radio">Tarif existant
-                        <input type="radio" class="radio">Demande particulière
+                    <form method="POST">
+						<input type="text" class="formin" placeholder="Nom+Prénom ou Pseudo" required><br><br><br>
+						<p class="radio">Tarifs existants </p>
+						<p class="radio"> Demande particulière</p>
+						<div class="div-radio">
+							<input type="number" min="0" max="10" class="formin" placeholder="N° de la page" required>
+							<input type="text" class="formin" style="margin-top: 75px;" placeholder="Nom de la demande" required>
+							<input type="text" class="formin" style="margin-top: 150px;" placeholder="Description de la commande" required>
+							<input type="email" class="formin" style="margin-top: 225px;" placeholder="Email" required>
+
+						</div>
+						<div class="div-radio">
+							<input type="text" class="formin" placeholder="Description de la demande" required>
+							<input type="number" min="0" class="formin" style="margin-top: 75px;" placeholder="Budjet" required>
+							<input type="email" class="formin" style="margin-top: 150px;" placeholder="Email" required>
+
+
+						</div>
+						<input type="submit" class="formin"  style="margin-top: 300px;" value="Envoyer ma commande">
+
+
                     </form>
                 </div>
             </div>
@@ -105,5 +155,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+    $(".fancybox").fancybox({
+          helpers: {
+              title : {
+                  type : 'float'
+              }
+          }
+      });
+		});
+	</script>
 </html>
 
