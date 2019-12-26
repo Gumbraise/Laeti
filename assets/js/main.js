@@ -18,6 +18,7 @@ window.onload = function() {
 cta[0].onclick = function() {
     cta[0].style.display = "none"
     cta[1].style.display = "none"
+    cta[2].style.display = "none"
 
     laeti.style = "animation: distransform 1s ease-in-out; transform: rotate(270deg); left: -50%;"
     modal[0].style.display = "block"
@@ -26,12 +27,14 @@ cta[0].onclick = function() {
 cta[1].onclick = function() {
     cta[0].style.display = "none"
     cta[1].style.display = "none"
+    cta[2].style.display = "none"
 
     modal[1].style.display = "block"
 }
-cta[2].onclick = function() {
+cta[3].onclick = function() {
     cta[0].style.display = "flex"
     cta[1].style.display = "flex"
+    cta[2].style.display = "flex"
 
     laeti.style = "animation: transform 1s ease-in-out; transform: rotate(360deg); left: -5%;"
     modal[0].style.display = "none"
